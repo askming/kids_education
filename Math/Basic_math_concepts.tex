@@ -1,0 +1,93 @@
+\documentclass[12pt, svgnames]{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{pst-node, auto-pst-pdf}
+\usepackage{pgf, tikz} 
+% \pgfmathsetseed{\number\pdfrandomseed} % to ensure that it is randomized use \randomseed for xelatex
+
+\newcommand{\thecmd}[1]{% 
+\pgfmathsetmacro{\a}{int(#1-#1/4)}%
+\pgfmathsetmacro{\b}{int(#1+#1/4)}% 
+\pgfmathsetmacro{\thenum}{int(random(\a,\b))}%
+\thenum%
+}%
+
+\begin{document}
+
+\subsection*{Two-digit number $\times$ two-digit number}
+
+\begin{itemize}
+\item Method 1
+\begin{postscript}
+    \begin{align*}
+        23\times 32 & = (\rnode{l1}20 + \rnode{l2}3)\times\rnode{r1}32 \\
+                    & \\
+                    & = (20 \times 32) + (3 \times 32) \\
+                    & = 640 + 96 \\
+                    & = 736
+    \end{align*}
+    \psset{arrows=->, nodesep=2pt, arcangle=45}
+    \ncarc{l1}{r1}
+    \psset{arrows=->, nodesep=2pt, arcangle=-45, linecolor=Red}
+    \ncarc{l2}{r1}
+\end{postscript}
+
+\item Method 2
+\begin{postscript}
+    \begin{align*}
+        23\times 32 & = (\rnode{l1}20 + \rnode{l2}3)\times(\rnode{r1}30 + \rnode{r2}2) \\
+                    & \\
+                    & = (20 \times 30) + (20 \times 2) + (3 \times 30) + (3 \times 2) \\
+                    & = 600 + 40 + 90 + 6 \\
+                    & = 736
+    \end{align*}
+    \psset{arrows=->, nodesep=2pt, arcangle=45}
+    \ncarc{l1}{r1}\ncarc[border=.5pt]{l1}{r2}
+    \psset{arrows=->, nodesep=2pt, arcangle=-45, linecolor=Red}
+    \ncarc{l2}{r1} \ncarc[border=.5pt]{l2}{r2}
+\end{postscript}
+\end{itemize}
+
+
+% example
+% \Large
+% \begin{postscript}
+%   \begin{align*}
+%     (\rnode{X1}{2x}+\rnode{Y1}{\smash[b]{3y}})(\rnode{X2}{4x}+\rnode{Y2}{5y}) & = (2x)(4x)+(2x)(5y)+(3y)(4x)+(3y)(5y) \\
+%                                                                               & = 8x²+10xy+12xy+15y² \\
+%                                                                               & = 8x²+22xy+15y²
+%   \end{align*}
+%   \psset{angle=90,nodesep=2pt, arrows=->, arrowinset=0.2}
+%   \ncbar[arm=15pt]{Y1}{Y2}\ncbar[border=1.5pt]{X1}{X2}
+%   \psset{angle=-90,nodesep=4pt}
+%   \ncbar{X1}{Y2}\ncbar[arm=8pt]{Y1}{X2}
+% \end{postscript}
+
+\subsection*{Special cases of two two-digit numbers multiplication}
+
+\begin{itemize}
+\item When both two-digit numbers have 1 in the tens place
+\item Two same two-digit nunbers that have 5 in the ones place
+\end{itemize}
+
+
+\subsection*{Division, decimal, and fraction}
+
+
+\subsection*{Scientific notation (for large numbers)}
+\begin{align*}
+    & 100 = 10^2 \\
+    & 1,000 = 10^3 \\
+    & 1,000,000 = 10^6 \\
+    & 1,200 = 1.2\times 1,000 = 1.2\times 10^3 \\
+    & 1,234 = 1.234 \times 10^3 \\
+    & 10^4 \times 10^3 = 10^{4+3} = 10^7 \\
+    & 10^4 \div 10^3 = {10000\over1000} = 10^{4-3} = 10^1 = 10
+\end{align*}
+
+\subsection*{Exercise}
+
+% \thecmd{100} $\times$ \thecmd{10}
+
+
+\end{document}

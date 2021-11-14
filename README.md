@@ -1,1 +1,7 @@
-# kids_education
+# Kids educational materials
+
+## Math
+
+## Chinese
+
+## English
