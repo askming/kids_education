@@ -6,7 +6,7 @@ page <- read_html(link)
 base_link <- page %>% html_elements("base") %>% html_attr("href")
 pdf_links <- page %>% html_elements(".FileDown")  %>% html_attr("href")
 
-main_folder <- "/Users/yangm37/Downloads/Kangaroo_math"
+main_folder <- "/Users/**/Downloads/Kangaroo_math"
 outfile <- file.path(main_folder, "README.md")
 current_year <- ""
 for (i in seq_along(pdf_links)) {
