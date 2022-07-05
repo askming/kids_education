@@ -12,8 +12,10 @@ current_year <- ""
 for (i in seq_along(pdf_links)) {
     year <- strsplit(pdf_links[i], "/")[[1]][4]
     file_name <- strsplit(pdf_links[i], "/")[[1]][5]
+    if (!dir.exists(main_folder)) dir.create(main_folder)
+    if (!file.exists(outfile)) file.create(outfile)
     download_folder <- file.path(main, year)
-    print(year)
+    # print(year)
     if (current_year != year) {
         write(c(sprintf("# %s", year), '\n', '- ', file.path(base_link, pdf_links[i]), '\n'), file = outfile, append = TRUE) # nolint
         current_year <- year

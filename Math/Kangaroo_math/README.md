@@ -221,3 +221,21 @@
 - https://www.matematica.pt/en//docs/kangaroo/enunciados/2021/2021_Student.pdf
 
 - https://www.matematica.pt/en//docs/kangaroo/enunciados/2021/2021_Answers.pdf
+
+# 2022
+
+- https://www.matematica.pt/en//docs/kangaroo/enunciados/2022/2022_Felix.pdf
+
+- https://www.matematica.pt/en//docs/kangaroo/enunciados/2022/2022_Felix.pdf
+
+- https://www.matematica.pt/en//docs/kangaroo/enunciados/2022/2022_Ecolier.pdf
+
+- https://www.matematica.pt/en//docs/kangaroo/enunciados/2022/2022_Benjamin.pdf
+
+- https://www.matematica.pt/en//docs/kangaroo/enunciados/2022/2022_Kadett.pdf
+
+- https://www.matematica.pt/en//docs/kangaroo/enunciados/2022/2022_Junior.pdf
+
+- https://www.matematica.pt/en//docs/kangaroo/enunciados/2022/2022_Student.pdf
+
+- https://www.matematica.pt/en//docs/kangaroo/enunciados/2022/2022_Answers.pdf
